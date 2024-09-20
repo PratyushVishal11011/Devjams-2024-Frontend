@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color:  #0e2c40;
+    display: flex;
+    box-shadow: 0 15px 15px rgba(194, 176, 176, 0.1);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #3bb4b4;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 15px rgba(194, 176, 176, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.sign-in-form h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1a4a5a;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #1a4a5a;
+    border-radius: 5px;
+}
+
+button {
+    font-family: 'Montserrat';
+    width: 100%;
+    padding: 10px;
+    background-color:#efbc75;
+    border: none;
+    border-radius: 10px;
+    color:#1a4a5a;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c1e1a7;
+}
