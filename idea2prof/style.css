@@ -34,7 +34,7 @@ body {
     /* Example: content: url("path/to/search.svg"); */
   }
   
-  .domain-bbl {
+  #domain-bbl {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -47,7 +47,9 @@ body {
     border-radius: 5px;
     margin: 5px;
   }
-  
+  domain-bubble[selected] {
+    background-color: #aaf483;
+  }
   /* Professor Card Styles */
   
   .prof-card {
