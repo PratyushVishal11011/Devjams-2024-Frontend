@@ -1,9 +1,10 @@
 //API request for geting professors details
 
 const apiUrl = 'https://jsonplaceholder.typicode.com/todos'; // Assuming multiple todos
-const outputElement = document.getElementById('output');
+// const outputElement = document.getElementById('output');
 
 const htmlHolder = document.getElementById("card-holder");
+let domainList = []
 
 const testvar =
     [
@@ -30,8 +31,8 @@ const testvar =
     ]
 
 function requestProf() {
-    htmlHolder.innerText = ""; //clearing out the place holder
-    if (domainList != null) {
+    if (domainList && domainList.length) {
+        htmlHolder.innerText = ""; //clearing out the place holder
         const requestBody = {
             'domain': domainList
         };
@@ -122,7 +123,6 @@ function requestProf() {
 
 //bubble selector
 const bubbles = document.querySelectorAll('#domain-bbl domain-bubble'); //get bublles in only in the search div
-const domainList = []
 bubbles.forEach(bubble => {
     bubble.addEventListener('click', () => {
         const selectedDomain = bubble.innerHTML;
