@@ -24,17 +24,27 @@
             <input type="text" name="domain-searchbar" id="domain-searchbar"
                 placeholder="Search for more research domains...">
             <button type="submit">
-                <span id="submit-icon"></span>
+                <span id="submit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
+                        <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
             </button>
         </div>
         <div class="domain-bbl">
             <!-- Place holder bubble with domain name -->
-            <domain-bubble>Cycling</domain-bubble>
+            <!-- <domain-bubble>Cycling</domain-bubble>
             <domain-bubble>Chemistry</domain-bubble>
             <domain-bubble>Physics</domain-bubble>
             <domain-bubble>Comples Planes</domain-bubble>
             <domain-bubble>Resistors</domain-bubble>
-            <domain-bubble>Material Science</domain-bubble>
+            <domain-bubble>Material Science</domain-bubble> -->
+            <label><input type="checkbox" name="domain" value="Cycling"><span class="domain-bubble"> Cycling</span></label>
+            <label><input type="checkbox" name="domain" value="Chemistry"><span class="domain-bubble"> Chemistry</span></label>
+            <label><input type="checkbox" name="domain" value="Physics"><span class="domain-bubble"> Physics</span></label>
+            <label><input type="checkbox" name="domain" value="Comples Planes"><span class="domain-bubble"> Comples Planes</span></label>
+            <label><input type="checkbox" name="domain" value="Resistors"><span class="domain-bubble"> Resistors</span></label>
+            <label><input type="checkbox" name="domain" value="Material Science"><span class="domain-bubble"> Material Science</span></label>
         </div>
     </div>
     <div id="card-holder">
