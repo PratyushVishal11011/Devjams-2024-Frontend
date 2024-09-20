@@ -31,12 +31,12 @@
                 </span>
             </button>
         </div>
-        <div class="domain-bbl">
+        <div id="domain-bbl">
             <!-- Place holder bubble with domain name -->
             <!-- <domain-bubble>Cycling</domain-bubble>
             <domain-bubble>Chemistry</domain-bubble>
             <domain-bubble>Physics</domain-bubble>
-            <domain-bubble>Comples Planes</domain-bubble>
+            <domain-bubble>Complex Planes</domain-bubble>
             <domain-bubble>Resistors</domain-bubble>
             <domain-bubble>Material Science</domain-bubble> -->
             <label><input type="checkbox" name="domain" value="Cycling"><span class="domain-bubble"> Cycling</span></label>
@@ -45,6 +45,10 @@
             <label><input type="checkbox" name="domain" value="Comples Planes"><span class="domain-bubble"> Comples Planes</span></label>
             <label><input type="checkbox" name="domain" value="Resistors"><span class="domain-bubble"> Resistors</span></label>
             <label><input type="checkbox" name="domain" value="Material Science"><span class="domain-bubble"> Material Science</span></label>
+        </div>
+        <div id="domain-search-submit">
+            <button type="submit" onclick="requestProf()">Submit</button>
+            <span id="submit-icon"></span>
         </div>
     </div>
     <div id="card-holder">
