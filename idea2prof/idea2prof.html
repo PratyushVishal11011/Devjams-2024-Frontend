@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <!-- Header -->
 
@@ -18,65 +21,74 @@
         -->
         <div class="domain-search">
             <!-- Search bar for searching domains -->
-             <input type="text" name="domain-searchbar" id="domain-searchbar" placeholder="Search for more research domains...">
-             <button type="submit">
+            <input type="text" name="domain-searchbar" id="domain-searchbar"
+                placeholder="Search for more research domains...">
+            <button type="submit">
                 <span id="submit-icon"></span>
-             </button>
+            </button>
         </div>
         <div class="domain-bbl">
             <!-- Place holder bubble with domain name -->
-             <domain-bubble>Cycling</domain-bubble>
-             <domain-bubble>Chemistry</domain-bubble>
-             <domain-bubble>Physics</domain-bubble>
-             <domain-bubble>Comples Planes</domain-bubble>
-             <domain-bubble>Resistors</domain-bubble>
-             <domain-bubble>Material Science</domain-bubble>
+            <domain-bubble>Cycling</domain-bubble>
+            <domain-bubble>Chemistry</domain-bubble>
+            <domain-bubble>Physics</domain-bubble>
+            <domain-bubble>Comples Planes</domain-bubble>
+            <domain-bubble>Resistors</domain-bubble>
+            <domain-bubble>Material Science</domain-bubble>
         </div>
     </div>
-    <div class="prof-card">
-        <!-- 
-        Professor Name
-        Photo (if avilable)
-        School/Dept
-        Domains Worked on
-        connect button
-        last updated on
-        -->
-        <div class="card-info">
-            <span class="card-photo">
-                <!-- faculty photo/ profile pic generator -->
-                <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48" alt="Profile Picture">
-            </span>
-            <span class="card-name">
-                <!-- faculty name -->
-                Prof. Prakul K Hebbur
-            </span>
+    <div id="card-holder">
+        <!-- card one (place holder) -->
+        <div class="prof-card">
+            <!-- 
+            Professor Name
+            Photo (if avilable)
+            School/Dept
+            Domains Worked on
+            connect button
+            last updated on
+            -->
+            <div class="card-info">
+                <span class="card-photo">
+                    <!-- faculty photo/ profile pic generator -->
+                    <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48" alt="Profile Picture">
+                </span>
+                <span class="card-name">
+                    <!-- faculty name -->
+                    Prof. Prakul K Hebbur
+                </span>
+            </div>
+            <div class="card-school">
+                <!-- faculty school -->
+                <span id="school-icon"></span>
+                <span>School of Electronics Engineering</span>
+            </div>
+            <div class="card-domain-bubble">
+                <!-- faculty domains/interests -->
+                <domain-bubble>Material Science</domain-bubble>
+                <domain-bubble>Science</domain-bubble>
+                <domain-bubble>Fluids</domain-bubble>
+                <domain-bubble>Material Science</domain-bubble>
+            </div>
+            <div class="card-connect">
+                <!-- connect button -->
+                <button class="connect-btn">
+                    Connect
+                    <span id="connect-btn-icon"></span>
+                </button>
+            </div>
+            <div class="card-lastup">
+                <!-- last updated details (optional) -->
+                Last Updated : 24th August 2024, 12:50pm
+            </div>
+            <div class="card-stats">
+                <!-- last updated details (optional) -->
+                Published Papers : 345 and citations : 4599
+            </div>
         </div>
-        <div class="card-school">
-            <!-- faculty school -->
-            <span id="school-icon"></span>
-            <span>School of Electronics Engineering</span>
-        </div>
-        <div class="card-domain-bubble">
-            <!-- faculty domains/interests -->
-            <domain-bubble>Material Science</domain-bubble>
-            <domain-bubble>Science</domain-bubble>
-            <domain-bubble>Fluids</domain-bubble>
-            <domain-bubble>Material Science</domain-bubble>
-        </div>
-        <div class="card-connect">
-            <!-- connect button -->
-             <button class="connect-btn">
-                Connect
-                <span id="connect-btn-icon"></span>
-            </button>
-        </div>
-        <div class="card-lastup">
-            <!-- last updated details (optional) -->
-             24th August 2024, 12:50pm
-        </div>
-    </div> 
+    </div>
 
     <!-- footer -->
+    <span id="output"></span>
 </body>
 </html>
