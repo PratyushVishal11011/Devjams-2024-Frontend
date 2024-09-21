@@ -13,6 +13,8 @@ body {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
 }
 
 /* Domain Selector Styles */
@@ -51,10 +53,12 @@ domain-bubble[selected] {
   border-color: #0f5132;
 }
 
-domain-bubble:hover {
+.domain-selector domain-bubble:hover {
   background-color: #e1f1e1;
   border-color: #54876f;
 }
+
+/* Professor Card Styles */
 
 /* Professor Card Styles */
 
@@ -68,6 +72,8 @@ domain-bubble:hover {
   grid-template-rows: auto auto auto;
   align-items: center;
   gap: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
 }
 
 .card-photo,
@@ -144,7 +150,7 @@ domain-bubble:hover {
 .card-lastup {
   grid-area: 3/3;
   font-style: italic;
-  color: #ccc;
+  color: #626161;
   text-align: right;
 }
 
@@ -162,3 +168,7 @@ domain-bubble:hover {
 /* Footer Styles */
 
  /* Add styles for your footer here (optional) */
+
+ body{
+  background: linear-gradient(90deg, #0e2c40, #226b7d, rgba(59,180,180,1))
+ }

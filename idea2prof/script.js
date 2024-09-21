@@ -39,12 +39,12 @@ function requestProf() {
             'domain': domainList
         };
     }
-    else if(!(domainList && domainList.length) && searchBar.value){
+    else if (!(domainList && domainList.length) && searchBar.value) {
         requestBody = {
             'information': searchBar.value
         };
     }
-    else if(domainList && domainList.length && searchBar.value){
+    else if (domainList && domainList.length && searchBar.value) {
         requestBody = {
             'domain': domainList,
             'information': searchBar.value
@@ -68,19 +68,19 @@ function requestProf() {
             // outputElement.textContent = "";
 
             // Iterate over each todo item
-            testvar.forEach(prof => {
-                // Create a new paragraph element for each todo
-                //test code from gemini (uncomment top also)
-                // const todoItem = document.createElement('p');
-                // todoItem.textContent = todo.title;
-                // outputElement.appendChild(todoItem);
+            // data.forEach(data => {
+            // Create a new paragraph element for each todo
+            //test code from gemini (uncomment top also)
+            // const todoItem = document.createElement('p');
+            // todoItem.textContent = todo.title;
+            // outputElement.appendChild(todoItem);
 
-                var domainList = "";
-                for (const domainl in prof.domains) { //creating domain bubbles
-                    domainList += "<domain-bubble>" + prof.domains[domainl] + "</domain-bubble>";
-                }
-                const profCard = document.createElement("div");
-                profCard.innerHTML = `
+            var domainList = "";
+            for (const domainl in data.domains) { //creating domain bubbles
+                domainList += "<domain-bubble>" + data.domains[domainl] + "</domain-bubble>";
+            }
+            const profCard = document.createElement("div");
+            profCard.innerHTML = `
                 <div class="prof-card">
                     <!-- 
                     Professor Name
@@ -93,17 +93,17 @@ function requestProf() {
                     <div class="card-info">
                         <span class="card-photo">
                             <!-- faculty photo/ profile pic generator -->
-                            <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48&seed=${prof.username}" alt="Profile Picture">
+                            <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48&seed=${data.username}" alt="Profile Picture">
                         </span>
                         <span class="card-name">
                             <!-- faculty name -->
-                            ${prof.name}
+                            ${data.name}
                         </span>
                     </div>
                     <div class="card-school">
                         <!-- faculty school -->
                         <span id="school-icon"></span>
-                        <span>${prof.department}</span>
+                        <span>${data.school}</span>
                     </div>
                     <div class="card-domain-bubble">
                         <!-- faculty domains/interests -->
@@ -111,27 +111,27 @@ function requestProf() {
                     </div>
                     <div class="card-connect">
                         <!-- connect button -->
-                        <button class="connect-btn" onclick="connect(${prof.username})">
+                        <button class="connect-btn" onclick="connect(${data.username})">
                             Connect
                             <span id="connect-btn-icon"></span>
                         </button>
                     </div>
                     <div class="card-lastup">
                         <!-- last updated details (optional) -->
-                        Last Updated : ${prof.lastup}
+                        Last Updated : ${data.last_updated}
                     </div>
                     <div class="card-stats">
                         <!-- profesor research details (optional) -->
-                        Published Papers : ${prof.publications} and Citations : ${prof.citations}
+                        Published Papers : ${data.publications} and Citations : ${data.citations}
                     </div>
                 </div>  
                 `
-                htmlHolder.append(profCard);
-            });
+            htmlHolder.append(profCard);
         })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        // });
+        .catch (error => {
+        console.error('Error:', error);
+    });
 }
 
 //bubble selector
