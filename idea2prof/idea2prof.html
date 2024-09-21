@@ -49,17 +49,25 @@
 
         </div>
         <div id="domain-search-submit">
-            <button type="submit" onclick="requestProf()">
+            <button type="submit" onclick="clear_page()">
+                <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 6l3 18h12l3-18H3zm16.5 2l-1.5 14H6L4.5 8h15zM10 4V2h4v2h5v2H5V4h5z"
+                        fill="currentColor" />
+                </svg>
                 </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8c1.85 0 3.55-.63 4.9-1.69l5.39 5.39 1.41-1.41-5.39-5.39C17.37 13.55 18 11.85 18 10c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"
-                            fill="currentColor" />
-                    </svg>
+                Clear
+            </button>
+            <button type="submit" onclick="requestProf()">
+                <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8c1.85 0 3.55-.63 4.9-1.69l5.39 5.39 1.41-1.41-5.39-5.39C17.37 13.55 18 11.85 18 10c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"
+                        fill="currentColor" />
+                </svg>
                 </span>
                 Submit
             </button>
-            <span id="submit-icon"></span>
         </div>
     </div>
     <div id="card-holder">

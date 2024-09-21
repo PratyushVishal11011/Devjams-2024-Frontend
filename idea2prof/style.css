@@ -121,6 +121,10 @@ domain-bubble[selected] {
   width: 230px;
 }
 
+#domain-search-submit{
+  display: flex;
+}
+
 .connect-btn:hover,#domain-search-submit button:hover {
   background-color: #45a049;
 }
@@ -138,6 +142,7 @@ domain-bubble[selected] {
   transition: 0.3s;
   width: 150px;
   font-size: medium;
+  margin: 10px;
 }
 
 #domain-search-submit button:hover {
@@ -170,5 +175,5 @@ domain-bubble[selected] {
  /* Add styles for your footer here (optional) */
 
  body{
-  background: linear-gradient(90deg, #0e2c40, #226b7d, rgba(59,180,180,1))
+  background: linear-gradient(90deg, #133d59, #226b7d, rgba(59,180,180,1))
  }
