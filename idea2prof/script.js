@@ -128,15 +128,11 @@ bubbles.forEach(bubble => {
         const selectedDomain = bubble.innerHTML;
         if (!domainList.includes(selectedDomain)) {
             domainList.push(selectedDomain);
-            console.log('Selected :', selectedDomain);
             bubble.setAttribute('selected', '');
         }
         else {
             domainList.splice(domainList.indexOf(selectedDomain), 1);
-            console.log('Removed :', selectedDomain);
             bubble.removeAttribute('selected');
         }
-        console.log(domainList)
-        // Perform actions based on the selected color (e.g., change background color)
     });
 });
