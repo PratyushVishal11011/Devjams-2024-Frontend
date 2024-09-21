@@ -41,6 +41,7 @@ body {
 }
 
 #domain-searchbar:focus {
+  outline: none;
   border-color: #4CAF50;
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
@@ -53,7 +54,6 @@ body {
   align-items: center;
   justify-content:space-evenly;
 }
-
 domain-bubble {
   padding: 5px 10px;
   border-radius: 6px;
