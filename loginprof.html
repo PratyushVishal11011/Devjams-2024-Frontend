@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="container">
+        <form class="sign-in-form" id="loginform">
+            <h2>login</h2>
+
+            <div class="input-group">
+                <label for="empid">Employee ID :</label>
+                <input type="text" id="empid" name="empid" maxlength="9" required style="background-color:  #b4dce9;">
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password" minlength="6" maxlength="30" required style="background-color:  #b4dce9;">
+            </div>
+
+            <button type="submit" style="background-color: #855410; color: black;">login </button>
+            <br>
+            <br>
+            <div class="header">
+                <h3 style="color: #1a4a5a;; font-size: 25px; text-decoration: none;">new user?  <a href="signinprof.html" style="color: #855410; text-decoration: none;" > click here</a></h3>
+            </div>
+            
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
