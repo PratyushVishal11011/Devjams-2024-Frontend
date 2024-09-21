@@ -21,7 +21,9 @@ body {
   display: flex;
   width: 100%;
 }
-
+.domain-search > * {
+  margin-right: 10px;
+}
 #domain-searchbar {
   flex: 1;
   padding: 10px;
@@ -124,6 +126,22 @@ domain-bubble:hover {
   text-align: right;
 }
 
+.search-btn{
+  width: 40px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-btn:hover{
+  background-color: #45a049;
+}
+
+svg{
+  padding-top: 2px;
+}
 /* Footer Styles */
 
  /* Add styles for your footer here (optional) */

@@ -19,7 +19,6 @@ template.innerHTML = `
                 <ul>
                     <li><a href="http://172.18.229.6:5500/home.html">Home</a></li>
                     <li><a href="http://172.18.229.6:5500/idea2prof/idea2prof.html">Explore</a></li>
-                    <li><a href="#">Connect</a></li>
                 </ul>
             </nav>
 
@@ -34,7 +33,6 @@ template.innerHTML = `
                     <div class="dropdown-content">
                         <a href="#"><strong>Username:</strong> devjams</a>
                         <a href="#"><strong>Email:</strong> devjams@vit.com</a>
-                        <a href="#"><strong>Domain:</strong> Tech</a> 
                         <a href="http://172.18.229.6:5500/signin.html"><i class="fa-duotone fa-solid fa-user-large" style="--fa-primary-color: #c1e1a7; --fa-secondary-color: #d6f2c0;"></i> Switch Users</a>
                         <a href="http://172.18.229.6:5500/login.html"><i class="fa-duotone fa-solid fa-arrow-right-from-bracket" style="--fa-primary-color: #c1e1a7; --fa-secondary-color: #d6f2c0; --fa-secondary-opacity: 0.5;"></i> Logout</a>
                     </div>
