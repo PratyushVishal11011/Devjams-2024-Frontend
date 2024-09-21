@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In Page</title>
     <link rel="stylesheet" href="signin.css">
 </head>
+
 <body>
     <script src="/header.js"></script>
     <div class="bcont">
         <div class="container">
-            <form class="sign-in-form">
+            <div class="user-type-selector">
+                <label>I am a:</label>
+                <div>
+                    <input type="radio" id="student" name="user-type" value="student" onclick="toggleForm()">
+                    <label for="student">Student</label>
+                </div>
+                <div>
+                    <input type="radio" id="professor" name="user-type" value="professor" onclick="toggleForm()">
+                    <label for="professor">Professor</label>
+                </div>
+            </div>
+            <script>
+                function toggleForm() {
+                    var userType = document.querySelector('input[name="user-type"]:checked').value;
+                    var studentForm = document.getElementById('stdsin');
+                    var professorForm = document.getElementById('profsin');
+
+                    if (userType === 'student') {
+                        studentForm.style.display = 'block';
+                        professorForm.style.display = 'none';
+                    } else if (userType === 'professor') {
+                        studentForm.style.display = 'none';
+                        professorForm.style.display = 'block';
+                    }
+                }
+
+                // Initialize forms to be hidden
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById('stdsin').style.display = 'none';
+                    document.getElementById('profsin').style.display = 'none';
+                });
+            </script>
+            <form class="sign-in-form" id="stdsin">
                 <h2>Sign In</h2>
-    
+
                 <div class="input-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required
+                        style="background-color: #b4dce9; color:#1a4a5a ;">
                 </div>
-    
+
                 <div class="input-group">
                     <label for="year">Year:</label>
-                    <select id="year" name="year" required>
+                    <select id="year" name="year" required
+                        style="background-color: #b4dce9;; color:#1a4a5a ; font-style:bold;">
                         <option value="">Select Year</option>
                         <option value="1">1st Year</option>
                         <option value="2">2nd Year</option>
@@ -28,25 +64,65 @@
                         <option value="4">4th Year</option>
                     </select>
                 </div>
-    
+
                 <div class="input-group">
                     <label for="branch">Branch:</label>
-                    <input type="text" id="branch" name="branch" required>
+                    <input type="text" id="branch" name="branch" required
+                        style="background-color: #b4dce9; color:#1a4a5a ;">
                 </div>
-    
+
                 <div class="input-group">
                     <label for="school">School:</label>
-                    <input type="text" id="school" name="school" required>
+                    <input type="text" id="school" name="school" required
+                        style="background-color: #b4dce9; color:#1a4a5a ;">
                 </div>
-    
+
                 <div class="input-group">
                     <label for="reg-number">Registration Number:</label>
-                    <input type="text" id="reg-number" name="reg-number" required>
+                    <input type="text" id="reg-number" name="reg-number" required
+                        style="background-color:  #b4dce9; color:#1a4a5a ; ">
                 </div>
-    
-                <button type="submit">Sign In</button>
+                <button type="submit" style="background-color: #855410; color: black;">Sign In</button>
+                <br>
+                <br>
+                <h3 style="font-size: 23px;color:#1a4a5a; font-family: 'Montserrat';"> already have an account? <a
+                        href="loginstu.html" style="color:#855410;text-decoration:none;">click here</a></h3>
+            </form>
+            <form class="sign-in-form" id="profsin">
+                <h2>Sign In</h2>
+
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required
+                        style="background-color: #b4dce9; color:#1a4a5a ;">
+                </div>
+
+                <div class="input-group">
+                    <label for="branch">Branch:</label>
+                    <input type="text" id="branch" name="branch" required
+                        style="background-color: #b4dce9; color:#1a4a5a ;">
+                </div>
+
+                <div class="input-group">
+                    <label for="school">School:</label>
+                    <input type="text" id="school" name="school" required
+                        style="background-color: #b4dce9; color:#1a4a5a ;">
+                </div>
+
+                <div class="input-group">
+                    <label for="empid">Employee ID :</label>
+                    <input type="text" id="empid" name="empid" required
+                        style="background-color:  #b4dce9; color:#1a4a5a ; ">
+                </div>
+
+                <button type="submit" style="background-color: #855410; color: black;">Sign In</button>
+                <br>
+                <br>
+                <h3 style="font-size: 23px;color:#1a4a5a; font-family: 'Montserrat';"> already have an account? <a
+                        href="loginprof.html" style="color:#855410;text-decoration:none;">click here</a></h3>
             </form>
         </div>
     </div>
 </body>
+
 </html>

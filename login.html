@@ -3,23 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="signin.css">
 </head>
 <body>
-    <div class="container">
-        <form class="sign-in-form" id="loginform">
-            <h2>login</h2>
-
-            <div class="input-group">
-                <label for="reg-number">Registration Number:</label>
-                <input type="text" id="regnum" name="regnum" maxlength="9" required>
-                <label for="password">password:</label>
-                <input type="password" id="password" name="password" minlength="6" maxlength="30" required>
+    <div class="bcont">
+        <div class="container">
+            <div class="user-type-selector">
+                <label>I am a:</label>
+                <div>
+                    <input type="radio" id="student" name="user-type" value="student" onclick="toggleForm()">
+                    <label for="student">Student</label>
+                </div>
+                <div>
+                    <input type="radio" id="professor" name="user-type" value="professor" onclick="toggleForm()">
+                    <label for="professor">Professor</label>
+                </div>
             </div>
+            <script>
+                function toggleForm() {
+                    var userType = document.querySelector('input[name="user-type"]:checked').value;
+                    var studentForm = document.getElementById('stdlogin');
+                    var professorForm = document.getElementById('proflogin');
 
-            <button type="submit">login </button>
-        </form>
+                    if (userType === 'student') {
+                        studentForm.style.display = 'block';
+                        professorForm.style.display = 'none';
+                    } else if (userType === 'professor') {
+                        studentForm.style.display = 'none';
+                        professorForm.style.display = 'block';
+                    }
+                }
+
+                // Initialize forms to be hidden
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById('stdlogin').style.display = 'none';
+                    document.getElementById('proflogin').style.display = 'none';
+                });
+            </script>
+            <form class="sign-in-form" id="stdlogin">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="regnum">Registration Number:</label>
+                    <input type="text" id="regnum" name="regnum" maxlength="9" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" minlength="6" maxlength="30" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <form class="sign-in-form" id="proflogin">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="empid">Employee ID:</label>
+                    <input type="text" id="empid" name="empid" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" minlength="6" maxlength="30" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
