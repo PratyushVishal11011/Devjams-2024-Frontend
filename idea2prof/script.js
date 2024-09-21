@@ -1,6 +1,6 @@
 //API request for geting professors details
 
-const apiUrl = 'https://527gjd1s-8000.inc1.devtunnels.ms/find_profs'; // Assuming multiple todos
+const apiUrl = 'https://1d60-136-233-9-98.ngrok-free.app/find_profs'; // Assuming multiple todos
 // const outputElement = document.getElementById('output');
 
 const htmlHolder = document.getElementById("card-holder");
@@ -41,13 +41,13 @@ function requestProf() {
     }
     else if(!(domainList && domainList.length) && searchBar.value){
         requestBody = {
-            'idea': searchBar.value
+            'information': searchBar.value
         };
     }
     else if(domainList && domainList.length && searchBar.value){
         requestBody = {
             'domain': domainList,
-            'idea': searchBar.value
+            'information': searchBar.value
         };
     }
     fetch(apiUrl, {
