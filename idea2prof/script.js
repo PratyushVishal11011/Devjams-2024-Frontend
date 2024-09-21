@@ -1,6 +1,6 @@
 //API request for geting professors details
 
-const apiUrl = 'https://1d60-136-233-9-98.ngrok-free.app/find_profs'; // Assuming multiple todos
+const apiUrl = 'https://b661-2409-40f4-3d-ac9d-44b2-42af-6049-b2c1.ngrok-free.app/find_profs'; // Assuming multiple todos
 // const outputElement = document.getElementById('output');
 
 const htmlHolder = document.getElementById("card-holder");
@@ -36,18 +36,17 @@ function requestProf() {
     let requestBody = {};
     if (domainList && domainList.length && !searchBar.value) {
         requestBody = {
-            'domain': domainList
+            'information': 'in these domains ' + domainList
         };
     }
     else if (!(domainList && domainList.length) && searchBar.value) {
         requestBody = {
-            'information': searchBar.value
+            'information': 'and have this idea.' + searchBar.value
         };
     }
     else if (domainList && domainList.length && searchBar.value) {
         requestBody = {
-            'domain': domainList,
-            'information': searchBar.value
+            'information': 'and have this idea.' + searchBar.value + 'and in these domains' + domainList
         };
     }
     fetch(apiUrl, {
@@ -68,19 +67,20 @@ function requestProf() {
             // outputElement.textContent = "";
 
             // Iterate over each todo item
-            // data.forEach(data => {
-            // Create a new paragraph element for each todo
-            //test code from gemini (uncomment top also)
-            // const todoItem = document.createElement('p');
-            // todoItem.textContent = todo.title;
-            // outputElement.appendChild(todoItem);
+            data.forEach(prof => {
+                // Create a new paragraph element for each todo
+                //test code from gemini (uncomment top also)
+                // const todoItem = document.createElement('p');
+                // todoItem.textContent = todo.title;
+                // outputElement.appendChild(todoItem);
 
-            var domainList = "";
-            for (const domainl in data.domains) { //creating domain bubbles
-                domainList += "<domain-bubble>" + data.domains[domainl] + "</domain-bubble>";
-            }
-            const profCard = document.createElement("div");
-            profCard.innerHTML = `
+                var domainList = "";
+                for (const domainl in prof.domains) { //creating domain bubbles
+                    let x = prof.domains[domainl];
+                    domainList += "<domain-bubble>" + x[0].toUpperCase() + x.slice(1) + "</domain-bubble>";
+                }
+                const profCard = document.createElement("div");
+                profCard.innerHTML = `
                 <div class="prof-card">
                     <!-- 
                     Professor Name
@@ -93,17 +93,17 @@ function requestProf() {
                     <div class="card-info">
                         <span class="card-photo">
                             <!-- faculty photo/ profile pic generator -->
-                            <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48&seed=${data.username}" alt="Profile Picture">
+                            <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48&seed=${prof.username}" alt="Profile Picture">
                         </span>
                         <span class="card-name">
                             <!-- faculty name -->
-                            ${data.name}
+                            ${prof.name}
                         </span>
                     </div>
                     <div class="card-school">
                         <!-- faculty school -->
                         <span id="school-icon"></span>
-                        <span>${data.school}</span>
+                        <span>${prof.school}</span>
                     </div>
                     <div class="card-domain-bubble">
                         <!-- faculty domains/interests -->
@@ -111,27 +111,27 @@ function requestProf() {
                     </div>
                     <div class="card-connect">
                         <!-- connect button -->
-                        <button class="connect-btn" onclick="connect(${data.username})">
+                        <button class="connect-btn" onclick="connect(${prof.username})">
                             Connect
                             <span id="connect-btn-icon"></span>
                         </button>
                     </div>
                     <div class="card-lastup">
                         <!-- last updated details (optional) -->
-                        Last Updated : ${data.last_updated}
+                        Last Updated : ${prof.last_updated}
                     </div>
                     <div class="card-stats">
                         <!-- profesor research details (optional) -->
-                        Published Papers : ${data.publications} and Citations : ${data.citations}
+                        Published Papers : ${prof.publications} and Citations : ${prof.citations}
                     </div>
                 </div>  
                 `
-            htmlHolder.append(profCard);
+                htmlHolder.append(profCard);
+            })
         })
-        // });
-        .catch (error => {
-        console.error('Error:', error);
-    });
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
 //bubble selector
@@ -149,3 +149,12 @@ bubbles.forEach(bubble => {
         }
     });
 });
+
+function clear_page() {
+    htmlHolder.innerText = ""; //clearing out the place holder
+    bubbles.forEach(bubble => {
+        bubble.removeAttribute('selected');
+    });
+    domainList = [];
+    searchBar.value = "";
+}

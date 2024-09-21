@@ -13,7 +13,8 @@ template.innerHTML = `
     <body>
         <header>
             <div class="logo">
-                <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48" alt="Website Logo">
+                ERROR
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fagentestudio.com%2Fuploads%2Fpost%2Fimage%2F69%2Fmain_how_to_design_404_page.png&f=1&nofb=1&ipt=a2ac14488c855a4442677354eed18524c3b4f994912174906f373ac9407752ac&ipo=images" alt="Website Logo">
             </div>
             <nav>
                 <ul>
@@ -26,7 +27,7 @@ template.innerHTML = `
                 <div class="dropdown">
                     <button class="dropbtn">
                         <div class="profile">
-                            <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48" alt="Profile Image">
+                            <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48&seed=prakul" alt="Profile Image">
                         </div>
                         <span class="username"></span>
                     </button>
