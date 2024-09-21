@@ -31,16 +31,10 @@ body {
 }
 
 .input-group {
-    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.input-group label {
-    font-size: 1.5em;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #1a4a5a;
-}
 
 .input-group input,
 .input-group select {
@@ -51,19 +45,3 @@ body {
     border-radius: 5px;
 }
 
-button {
-    font-family: 'Montserrat';
-    width: 100%;
-    padding: 10px;
-    background-color:#efbc75;
-    border: none;
-    border-radius: 10px;
-    color:#1a4a5a;
-    font-size: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #c1e1a7;
-}
