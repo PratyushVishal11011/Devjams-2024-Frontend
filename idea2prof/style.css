@@ -147,6 +147,18 @@ domain-bubble:hover {
   color: #ccc;
   text-align: right;
 }
+
+.card-stats {
+
+  /* Add your desired styles here */
+
+  font-size: 14px;
+
+  color: #333;
+
+  margin-top: 10px;
+
+}
 /* Footer Styles */
 
  /* Add styles for your footer here (optional) */

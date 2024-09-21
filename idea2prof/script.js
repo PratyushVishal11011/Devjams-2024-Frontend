@@ -1,35 +1,35 @@
 //API request for geting professors details
 
-const apiUrl = 'https://jsonplaceholder.typicode.com/todos'; // Assuming multiple todos
+const apiUrl = 'https://527gjd1s-8000.inc1.devtunnels.ms/find_profs'; // Assuming multiple todos
 // const outputElement = document.getElementById('output');
 
 const htmlHolder = document.getElementById("card-holder");
 const searchBar = document.getElementById("domain-searchbar");
 let domainList = []
 
-const testvar =
-    [
-        {
-            "citations": 573,
-            "department": "Computer Science",
-            "domains": ["Behavioral", "Economics"],
-            "name": "Christopher Smith",
-            "phone": "(820)711-1907x4457",
-            "publications": 31,
-            "username": "198413",
-            "lastup": "24 Sep 21"
-        },
-        {
-            "citations": 53,
-            "department": "Computer Science",
-            "domains": ["Behavioral", "Economics", "Cycle"],
-            "name": "Prakul K Hebbur",
-            "phone": "(820)711-19074457",
-            "publications": 36,
-            "username": "198416",
-            "lastup": "2 Aug 24"
-        }
-    ]
+// const testvar =
+//     [
+//         {
+//             "citations": 573,
+//             "department": "Computer Science",
+//             "domains": ["Behavioral", "Economics"],
+//             "name": "Christopher Smith",
+//             "phone": "(820)711-1907x4457",
+//             "publications": 31,
+//             "username": "198413",
+//             "lastup": "24 Sep 21"
+//         },
+//         {
+//             "citations": 53,
+//             "department": "Computer Science",
+//             "domains": ["Behavioral", "Economics", "Cycle"],
+//             "name": "Prakul K Hebbur",
+//             "phone": "(820)711-19074457",
+//             "publications": 36,
+//             "username": "198416",
+//             "lastup": "2 Aug 24"
+//         }
+//     ]
 
 function requestProf() {
     htmlHolder.innerText = ""; //clearing out the place holder
