@@ -13,8 +13,10 @@ body {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Light transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle shadow for better visibility */
 }
 
 /* Domain Selector Styles */
@@ -23,14 +25,24 @@ body {
   display: flex;
   width: 100%;
 }
-.domain-search > * {
+
+.domain-search>* {
   margin-right: 10px;
 }
+
 #domain-searchbar {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#domain-searchbar:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
 #domain-bbl {
@@ -38,6 +50,8 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   margin: 10px;
+  align-items: center;
+  justify-content:space-evenly;
 }
 
 domain-bubble {
@@ -72,8 +86,10 @@ domain-bubble[selected] {
   grid-template-rows: auto auto auto;
   align-items: center;
   gap: 10px;
-  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Light transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle shadow for better visibility */
 }
 
 .card-photo,
@@ -110,7 +126,8 @@ domain-bubble[selected] {
   justify-content: right;
 }
 
-.connect-btn,#domain-search-submit button {
+.connect-btn,
+#domain-search-submit button {
   background-color: #4CAF50;
   color: white;
   padding: 10px 15px;
@@ -121,11 +138,12 @@ domain-bubble[selected] {
   width: 230px;
 }
 
-#domain-search-submit{
+#domain-search-submit {
   display: flex;
 }
 
-.connect-btn:hover,#domain-search-submit button:hover {
+.connect-btn:hover,
+#domain-search-submit button:hover {
   background-color: #45a049;
 }
 
@@ -150,8 +168,10 @@ domain-bubble[selected] {
 }
 
 #domain-search-submit svg {
-  margin-right: 8px; /* Add some space between the icon and the text */
+  margin-right: 8px;
+  /* Add some space between the icon and the text */
 }
+
 .card-lastup {
   grid-area: 3/3;
   font-style: italic;
@@ -170,10 +190,11 @@ domain-bubble[selected] {
   margin-top: 10px;
 
 }
+
 /* Footer Styles */
 
- /* Add styles for your footer here (optional) */
+/* Add styles for your footer here (optional) */
 
- body{
-  background: linear-gradient(90deg, #133d59, #226b7d, rgba(59,180,180,1))
- }
+body {
+  background: linear-gradient(90deg, #133d59, #226b7d, rgba(59, 180, 180, 1))
+}
