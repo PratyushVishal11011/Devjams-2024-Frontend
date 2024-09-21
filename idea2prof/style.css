@@ -28,29 +28,54 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
-}
 
-#domain-bbl {
+  }
+  
+  /* #submit-icon {
+    /* Style the submit button icon here (optional) */
+    /* Example: content: url("path/to/search.svg"); */
+  } */
+  
+  .domain-bbl {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 10px;
-}
-
-domain-bubble {
-    background-color: #eee;
+    margin-top: 15px;
+  }
+  
+  .domain-bubble label {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+  }
+  
+  
+  .domain-bbl input[type="checkbox"] {
+    display: none;
+  }
+  
+  .domain-bubble {
     padding: 5px 10px;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-domain-bubble[selected] {
-    background-color: #aaf483;
-}
-
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s; 
+  }
+  
+  .domain-bbl input[type="checkbox"]:checked+.domain-bubble {
+    background-color: #d1e7dd;
+    border-color: #0f5132;
+  }
+  
 /* Professor Card Styles */
 
 .prof-card {
+
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
@@ -62,15 +87,16 @@ domain-bubble[selected] {
     gap: 10px;
 }
 
-/* .card-photo {
+.card-photo {
     grid-area: 1/1;
   }
   
   .card-name {
     grid-area: 1/2;
     font-weight: bold;
-  } */
+  }
 .card-info {
+
     grid-area: 1 / 1 / span 1 / span 2;
     display: flex;
     align-items: center;
@@ -111,7 +137,12 @@ domain-bubble[selected] {
 }
 
 .connect-btn:hover {
-    background-color: #45a049;
+  background-color: #45a049;
+  transform: translate(0.7px, -1.5px);
+}
+
+.connect-btn:active {
+  transform: translate(0.2px, -.7px);
 }
 
 .card-lastup {
@@ -120,6 +151,52 @@ domain-bubble[selected] {
     color: #ccc;
     text-align: right;
 }
+/* loading animation */
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1; }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
 
 /* Footer Styles */
 
