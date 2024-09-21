@@ -1,36 +1,45 @@
-document.getElementById("loginform").addEventListener('submit',async function name(event)
-{
+document.getElementById('loginForm').addEventListener('submit', async function(event) {
     event.preventDefault();
+    
+    const regnum = document.getElementById('regnum').value;
+    const password = document.getElementById('password').value;
 
-    const regnum = document.getElementById(`regnum`).value
-    const password = document.getElementById(`password`).value;
-
-    const logindata = {
-        regnum: regnum,
-        password: password
-    };
-
-    try{
-
-        const response = await fetch("api", {
+    try {
+        const response = await fetch('/api/login', {
             method: 'POST',
-            header: {
-                'contenttype' : 'application/json'
-            },
-            body: JSON.stringify(logindata)
-        })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ regnum, password })
+        });
 
-        if (response.ok)  {
-            const result = await response.json();
-            document.getElementById('message').textContent = (`Login succesful!!`);
-
-        } 
-        else {
-            const errordata = await response.json();
-            document.getElementById(`message`).textContent = 'invalid credntials'
+        if (response.ok) {
+            const data = await response.json();
+            localStorage.setItem('authToken', data.token);
+            alert('login successful!');
+        } else {
+            alert('login failed!');
         }
     } catch (error) {
-        console.error(`login error`);
-        document.getElementById('message').textContent = `error please try again later`;
+        console.error('error during login:', error);
     }
-    });
+});
+
+window.addEventListener('load', async function() {
+    const token = localStorage.getItem('authToken');
+    
+    if (token) {
+        try {
+            const response = await fetch('/api/protected', {
+                headers: { 'authorization': `Bearer ${token}` }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert(`auto login success: ${data.message}`);
+            } else {
+                alert('auto login failed!');
+            }
+        } catch (error) {
+            console.error('error during auto login:', error);
+        }
+    }
+});
