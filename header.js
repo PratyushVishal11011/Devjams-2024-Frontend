@@ -13,7 +13,7 @@ template.innerHTML = `
     <body>
         <header>
             <div class="logo">
-                ERROR
+                <span class="text">ERROR</span>
                 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fagentestudio.com%2Fuploads%2Fpost%2Fimage%2F69%2Fmain_how_to_design_404_page.png&f=1&nofb=1&ipt=a2ac14488c855a4442677354eed18524c3b4f994912174906f373ac9407752ac&ipo=images" alt="Website Logo">
             </div>
             <nav>

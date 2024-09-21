@@ -29,8 +29,15 @@ header {
     align-items: center;
     justify-content: center;
     font-size: larger;
-    font-style: italic;
     color: rgb(245, 170, 0);
+}
+.logo .text{
+    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20deg, 0deg);
+    font-style: italic;
 }
 nav {
     margin-left: auto;
