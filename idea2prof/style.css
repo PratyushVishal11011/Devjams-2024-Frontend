@@ -5,8 +5,7 @@ body {
   padding: 0;
 }
 
-.domain-selector,
-.prof-card {
+.domain-selector {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +33,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 domain-bubble {
@@ -50,28 +49,30 @@ domain-bubble[selected] {
   border-color: #0f5132;
 }
 
+domain-bubble:hover {
+  background-color: #e1f1e1;
+  border-color: #54876f;
+}
+
 /* Professor Card Styles */
 
 .prof-card {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "photo name"
-    "domains connect"
-    "lastup";
   align-items: center;
   gap: 10px;
 }
 
-/* .card-photo {
-  grid-area: 1/1;
+.card-photo,
+.card-name {
+  padding-right: 10px;
 }
 
-.card-name {
-  grid-area: 1/2;
-  font-weight: bold;
-} */
 .card-info {
   grid-area: 1 / 1 / span 1 / span 2;
   display: flex;
@@ -91,7 +92,7 @@ domain-bubble[selected] {
   grid-area: 2/1 /span 1 / span 2;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
 }
 
 .card-connect {
@@ -101,7 +102,7 @@ domain-bubble[selected] {
   justify-content: right;
 }
 
-.connect-btn {
+.connect-btn,#domain-search-submit button {
   background-color: #4CAF50;
   color: white;
   padding: 10px 15px;
@@ -112,7 +113,7 @@ domain-bubble[selected] {
   width: 230px;
 }
 
-.connect-btn:hover {
+.connect-btn:hover,#domain-search-submit button:hover {
   background-color: #45a049;
 }
 
@@ -125,4 +126,4 @@ domain-bubble[selected] {
 
 /* Footer Styles */
 
-/* Add styles for your footer here (optional) */
+ /* Add styles for your footer here (optional) */

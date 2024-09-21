@@ -79,7 +79,7 @@ function requestProf() {
                         <div class="card-info">
                             <span class="card-photo">
                                 <!-- faculty photo/ profile pic generator -->
-                                <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48" alt="Profile Picture">
+                                <img src="https://api.dicebear.com/9.x/shapes/svg?radius=0&size=48&seed=${prof.username}" alt="Profile Picture">
                             </span>
                             <span class="card-name">
                                 <!-- faculty name -->

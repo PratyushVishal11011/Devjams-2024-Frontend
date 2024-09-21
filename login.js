@@ -1,11 +1,11 @@
-document.getElementById('loginForm').addEventListener('submit', async function(event) {
+document.getElementById('loginForm').addEventListener('submit', async function (event) {
     event.preventDefault();
-    
+
     const regnum = document.getElementById('regnum').value;
     const password = document.getElementById('password').value;
-
+    const apiURL = ''
     try {
-        const response = await fetch('/api/login', {
+        const response = await fetch(apiURL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ regnum, password })
@@ -23,9 +23,9 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     }
 });
 
-window.addEventListener('load', async function() {
+window.addEventListener('load', async function () {
     const token = localStorage.getItem('authToken');
-    
+
     if (token) {
         try {
             const response = await fetch('/api/protected', {
