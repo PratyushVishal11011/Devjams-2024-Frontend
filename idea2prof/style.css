@@ -119,28 +119,33 @@ domain-bubble:hover {
   background-color: #45a049;
 }
 
+#domain-search-submit button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 150px;
+  font-size: medium;
+}
+
+#domain-search-submit button:hover {
+  background-color: #45a049;
+}
+
+#domain-search-submit svg {
+  margin-right: 8px; /* Add some space between the icon and the text */
+}
 .card-lastup {
   grid-area: 3/3;
   font-style: italic;
   color: #ccc;
   text-align: right;
-}
-
-.search-btn{
-  width: 40px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.search-btn:hover{
-  background-color: #45a049;
-}
-
-svg{
-  padding-top: 2px;
 }
 /* Footer Styles */
 
