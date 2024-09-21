@@ -136,6 +136,10 @@ domain-bubble[selected] {
   cursor: pointer;
   transition: 0.3s;
   width: 230px;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #domain-search-submit {
