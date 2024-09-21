@@ -18,8 +18,8 @@ template.innerHTML = `
             </div>
             <nav>
                 <ul>
-                    <li><a href="http://172.18.237.162:5500//home.html">Home</a></li>
-                    <li><a href="http://172.18.237.162:5500//idea2prof/idea2prof.html">Explore</a></li>
+                    <li><a href="http://172.18.237.162:5500/home.html">Home</a></li>
+                    <li><a href="http://172.18.237.162:5500/idea2prof/idea2prof.html">Explore</a></li>
                 </ul>
             </nav>
 

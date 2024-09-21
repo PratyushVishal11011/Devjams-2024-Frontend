@@ -103,7 +103,7 @@ function requestProf() {
                     <div class="card-school">
                         <!-- faculty school -->
                         <span id="school-icon"></span>
-                        <span>${prof.school}</span>
+                        <span>${prof.department}</span>
                     </div>
                     <div class="card-domain-bubble">
                         <!-- faculty domains/interests -->
@@ -122,7 +122,7 @@ function requestProf() {
                     </div>
                     <div class="card-stats">
                         <!-- profesor research details (optional) -->
-                        Published Papers : ${prof.publications} and Citations : ${prof.citations}
+                        ${prof.publications} Published Papers and ${prof.citations} Citations
                     </div>
                 </div>  
                 `
