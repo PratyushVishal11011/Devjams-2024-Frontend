@@ -6,7 +6,7 @@ template.innerHTML = `
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Header Bar</title>
-        <link rel="stylesheet" href="http://172.18.237.162:5500//header.css">
+        <link rel="stylesheet" href="/header.css">
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c653952213.js" crossorigin="anonymous"></script>
     </head>
@@ -18,8 +18,8 @@ template.innerHTML = `
             </div>
             <nav>
                 <ul>
-                    <li><a href="http://172.18.237.162:5500/home.html">Home</a></li>
-                    <li><a href="http://172.18.237.162:5500/idea2prof/idea2prof.html">Explore</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="idea2prof/idea2prof.html">Explore</a></li>
                 </ul>
             </nav>
 
@@ -34,8 +34,8 @@ template.innerHTML = `
                     <div class="dropdown-content">
                         <a href="#"><strong>Username:</strong> devjams</a>
                         <a href="#"><strong>Email:</strong> devjams@vit.com</a>
-                        <a href="http://172.18.237.162:5500//signin.html"><i class="fa-duotone fa-solid fa-user-large" style="--fa-primary-color: #c1e1a7; --fa-secondary-color: #d6f2c0;"></i> Switch Users</a>
-                        <a href="http://172.18.237.162:5500//login.html"><i class="fa-duotone fa-solid fa-arrow-right-from-bracket" style="--fa-primary-color: #c1e1a7; --fa-secondary-color: #d6f2c0; --fa-secondary-opacity: 0.5;"></i> Logout</a>
+                        <a href="/signin.html"><i class="fa-duotone fa-solid fa-user-large" style="--fa-primary-color: #c1e1a7; --fa-secondary-color: #d6f2c0;"></i> Switch Users</a>
+                        <a href="/login.html"><i class="fa-duotone fa-solid fa-arrow-right-from-bracket" style="--fa-primary-color: #c1e1a7; --fa-secondary-color: #d6f2c0; --fa-secondary-opacity: 0.5;"></i> Logout</a>
                     </div>
                 </div>
             </div>
